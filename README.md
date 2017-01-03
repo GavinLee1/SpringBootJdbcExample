@@ -23,7 +23,19 @@
 跑起来之后，用任意浏览器，输入`http://localhost:8080/test`就可以了  
 
 ##3.值得注意的点  
-这个例子用到了Spring Boot的开发者工具，即，当项目有更改的时候，会自动更新项目  
-
-`若需要引用，请查看 pom.xml中的dependency 和 plugin`
+这个例子用到了Spring Boot的开发者工具，即，当项目有更改的时候，会自动更新项目,需要在pom.xml里添加：  
+####Dependency
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<optional>true</optional>
+	</dependency>  
+#####Plugin  
+	<plugin>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-maven-plugin</artifactId>
+		<configuration>
+			<fork>true</fork>
+		</configuration>
+	</plugin>  
 
